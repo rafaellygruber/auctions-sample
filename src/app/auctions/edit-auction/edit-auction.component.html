@@ -1,0 +1,61 @@
+<po-page-edit p-title="Editar Leilão" [p-breadcrumb]="breadcrumb">
+
+  <form #formAuction="ngForm">
+    <div class="po-row">
+      <po-input class="po-md-6"
+        name="name"
+        [(ngModel)]="auction.name"
+        p-label="Nome do Leilão"
+        p-required>
+      </po-input>
+    
+      <po-decimal class="po-md-6"
+        name="name"
+        [(ngModel)]="auction.initialValue"
+        p-label="Valor Inicial"
+        p-required>
+      </po-decimal>
+    
+    </div>
+    
+    <po-divider></po-divider>
+    
+    <div class="po-row">
+      <po-input class="po-md-6"
+        name="responsible"
+        [(ngModel)]="auction.responsible"
+        p-label="Responsável"
+        p-required>
+      </po-input>
+
+    <po-switch
+      name="used"
+      class="po-md-6"
+      [(ngModel)]="auction.used"
+      p-label="Item Usado"
+      p-label-off="Não"
+      p-label-on="Sim"
+      p-required>
+    </po-switch>
+    
+    </div>
+    
+    <po-divider></po-divider>
+    
+    <div class="po-row">
+
+      <po-datepicker class="po-md-6"
+        name="startDate"
+        [(ngModel)]="auction.startDate"
+        p-label="Data de abertura"
+        p-required>
+      </po-datepicker>
+    
+      <po-datepicker class="po-md-6"
+        name="endDate"
+        [(ngModel)]="auction.endDate"
+        p-label="Data de finalização">
+      </po-datepicker>
+    </div>
+  </form>
+</po-page-edit>

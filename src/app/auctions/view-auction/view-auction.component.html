@@ -1,0 +1,47 @@
+<po-page-detail [p-title]="'Visualizar Leilão'" [p-breadcrumb]="breadcrumb">
+  <div class="po-row">
+    <po-info
+      class="po-md-4"
+      p-label="Nome do Leilão"
+      [p-value]="auction.name">
+    </po-info>
+
+    <po-info
+      class="po-md-4"
+      p-label="Valor Inicial"
+      [p-value]="auction.initialValue">
+    </po-info>
+
+    <po-switch
+      name="used"
+      class="po-md-4"
+      [(ngModel)]="auction.used"
+      p-label="Item Usado"
+      p-label-off="Não"
+      p-label-on="Sim"
+      p-disabled>
+    </po-switch>
+  </div>
+  
+  <po-divider></po-divider>
+  
+  <div class="po-row">
+    <po-info
+      class="po-md-4"
+      p-label="Responsável"
+      [p-value]="auction.responsible">
+    </po-info>
+
+    <po-info
+      class="po-md-4"
+      p-label="Data de abertura"
+      [p-value]="auction.startDate">
+    </po-info>
+
+    <po-info
+      class="po-md-4"
+      p-label="Data de Finalização"
+      [p-value]="auction.endDate">
+    </po-info>
+  </div>
+</po-page-detail>
